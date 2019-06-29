@@ -1,6 +1,6 @@
 // Import Data form config.ts
 import * as ConfigFile from "./config";
-
+//
 
 const Discord = require("discord.js");
 const bot = new Discord.Client();
@@ -27,7 +27,7 @@ bot.on("message", function(message) {
   }
 });
 
-/// Bot subscribes to voiceStateupdate, which is fired every time a user Joins/leaves or Mutes/Unmutes
+// Bot subscribes to voiceStateupdate, which is fired every time a user Joins/leaves or Mutes/Unmutes
 bot.on("voiceStateUpdate", (oldMember, newMember) => {
   let newUserChannel = newMember.voiceChannel;
   let oldUserChannel = oldMember.voiceChannel;
