@@ -1,6 +1,11 @@
 // Import Data form config.ts
-import * as ConfigFile from "./config";
-//
+
+//Production
+//import * as ConfigFile from "./config";
+
+//Development
+import * as ConfigFile from "./configdev";
+
 
 const Discord = require("discord.js");
 const bot = new Discord.Client();
