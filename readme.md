@@ -51,11 +51,11 @@ Name | Type | Default | Supported Options | Description
 ---------|----------|---------|---------|---------
  token | string | required | - | Discord_Token 
  prefix | string | required | any combination of characters | Prefix for interacting with the bot
- receive_join_messages | boolean | required | `true|false` | Receive formatted Join messages in separate channel
+ receive_join_messages | boolean | required |  `true` \| `false` | Receive formatted Join messages in separate channel
  channel_join | string | required, if receive_join_message = true | 426146482629993420 | Your channel ID where you want the formatted Join messages to go
 channel_log | string | required | 433146482629993433 | Your channel ID where logging message go to 
-mute_state_on_join | boolean | false | `true|false`| Create initial Mute/Unmute state message when user joins voicechannel if true besides the join message.
-message_layout_join | string | big | `big|small`| Set size of Join message see pictures on top for examples.
+mute_state_on_join | boolean | false |  `true` \| `false` | Create initial Mute/Unmute state message when user joins voicechannel if true besides the join message.
+message_layout_join | string | big |  `big` \| `small` | Set size of Join message see pictures on top for examples.
 embed_message_color | string | #00AE86 | `All hex color codes`| Sets the color of the left bar alongside the Join message. Default = Green
 
 
