@@ -59,16 +59,6 @@ bot.on("voiceStateUpdate", (oldMember, newMember) => {
       }
     }
 
-    // if (channeljoin) {
-    //   let embcolor = "5838556";
-
-    //   if (newMember.displayName === "Kiotam") {
-    //     embcolor = "3447003";
-    //   }
-    // }
-
-    
-
 
     if (channellog) {
       channellog.send(
@@ -76,6 +66,7 @@ bot.on("voiceStateUpdate", (oldMember, newMember) => {
       );
     }
 
+    if (ConfigFile.config.receive_join_messages === true) {
     if (ConfigFile.config.message_layout_join === "big") {
       const attachment = new Discord.Attachment('./card_images/approved.png', 'approved.png');
       const embed = new Discord.RichEmbed()
@@ -99,7 +90,7 @@ bot.on("voiceStateUpdate", (oldMember, newMember) => {
          * Takes a Date object, defaults to current date.
          */
         .setTimestamp()
-        .setURL("https://kiot.nl")
+        .setURL("https://discordapp.com/")
         .addField(
           newMember.displayName,
           "Enjoy your stay **" + newMember.displayName + "**!"
@@ -144,7 +135,7 @@ bot.on("voiceStateUpdate", (oldMember, newMember) => {
         .setFooter("Message was sent on")
         .setThumbnail(newMember.user.displayAvatarURL)
         .setTimestamp()
-        .setURL("https://kiot.nl")
+        .setURL("https://discordapp.com/")
         .addField(
           newMember.displayName,
           "Enjoy your stay **" + newMember.displayName + "**!"
@@ -152,6 +143,7 @@ bot.on("voiceStateUpdate", (oldMember, newMember) => {
 
       channeljoin.send("", { embed });
     }
+  }
   } else if (newUserChannel === undefined) {
     // User leaves a voice channel or Mutes/ Unmutes
     //Sends Message in Channel log with which user left which channel
@@ -168,8 +160,7 @@ bot.on("voiceStateUpdate", (oldMember, newMember) => {
         `${newMember} moved from voice channel ${oldUserChannel} to ${newUserChannel}`
       );
   } else if (oldMember.voiceChannelID === newMember.voiceChannelID) {
-    //user stays in same channel (old channel ID is same from the new one), check if user did mute/unmute
-    // If nobody is joining or leaving check if somebody muted or unmuted
+    //user stays in same channel (old channel ID is same as the new one), check if user did mute/unmute
     // User mutes himself
 
     if (newMember.selfMute === true) {
