@@ -11,11 +11,11 @@ There is also an option to send only joining events to another channel in a nice
 ![Logger](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/readme_images/Logger.PNG)
 
 ### Join messages in seperate channel:
-Big:
+#### Big:
 ![join_announcement_big](https://github.com/Mister-Espria/DiscLoBot/blob/master/readme_images/Join_announcement_big.PNG)
 
 
-Small: 
+#### Small: 
 ![join_announcement_small](https://github.com/Mister-Espria/DiscLoBot/blob/master/readme_images/Join_announcement_small.PNG)
 
 ## Example Usecase
