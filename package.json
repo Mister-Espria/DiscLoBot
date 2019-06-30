@@ -1,12 +1,12 @@
 {
-  "name": "kibot",
+  "name": "disclobot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "DiscLoBot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Kiotam",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^12.0.3",
