@@ -2,10 +2,21 @@
 
 ## What does this bot do?
 
-DiscLoBot Logs events of users joining or leaving a voicechannel and moving between them. Secondly it logs users mute or unmute themselves.
+Discord Logger Bot Logs events of users joining or leaving a voicechannel and moving between them. Secondly it logs users mute or unmute themselves.
 
 All these events will be logged in a channel of your choosing.
 There is also an option to send only joining events to another channel in a nice formatted message in case you want to make that available to see to other members.
+
+### Simple text logger
+![Logger](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/readme_images/Logger.PNG)
+
+### Join messages in seperate channel:
+Big:
+![join_announcement_big](https://github.com/Mister-Espria/DiscLoBot/blob/master/readme_images/Join_announcement_big.PNG)
+
+
+Small: 
+![join_announcement_small](https://github.com/Mister-Espria/DiscLoBot/blob/master/readme_images/Join_announcement_small.PNG)
 
 ## Example Usecase
 I use this bot in combination with Home-Assistant and Node-Red. I use Node-Red to read the log messages created by DiscLoBot and based on the text perform an action in Home-Assistant. For example when i mute myself the led-strip behind my desk turns to red an back to it's orignal color if i unmute myself.
