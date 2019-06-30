@@ -24,6 +24,8 @@ This is a selfhosted bot. I found public bot's which had this functionalty but t
 I use this bot in combination with [Home-Assistant](https://www.home-assistant.io/) and [Node-Red](https://nodered.org/). I use Node-Red to read the log messages created by DiscLoBot and based on the text perform an action in Home-Assistant. For example when i mute myself the led-strip behind my desk turns to red an back to it's orignal color if i unmute myself.
 Or when a specific friend joins a voicechannel i will let google home announce it. The bot creates also Join messages in a seperate channel so on mobile you will receive also notifications if somebody joins a voicechannel.
 
+### Setup
+
 #### prerequisites
 
 1. A machine where you can run it from (I used a Debian machine).
@@ -35,8 +37,9 @@ Or when a specific friend joins a voicechannel i will let google home announce i
 1. First follow [this simple guide](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token) to create a bot and obtain a token.
 2. [Download](https://github.com/Mister-Espria/DiscLoBot/archive/master.zip) the contens of this gitbub page and extract them to a folder on your machine.
 3. Edit config.ts. Add your Discord_token obtained in step 1 and add the channel id for join messages and the channel id for all logging messages. 
-    > Finding channel ID: On Discord, open your User Settings -> Appearance -> Enable Developer Mode. Then you can right click on any text channel and an option to `Copy ID` will show.
-You can change other options in config.ts aswell. Check ConfigOptions below.
+    > **Finding channel ID:** 
+    On Discord, open your User Settings -> Appearance -> Enable Developer Mode. Then you can right click on any text channel and an option to `Copy ID` will show.
+You can change other options in config.ts aswell. Check [ConfigOptions](https://github.com/Mister-Espria/DiscLoBot#configoptions) below.
 4. To run the bot i installed [PM2](http://pm2.keymetrics.io/) by running: `npm install pm2 -g `
 5. Then navigate to the folder with `DiscLoBot.js` in it and run the command `pm2 start DiscLoBot.js`
     > To see Logs of the running bot use `pm2 monit DiscLoBot`
@@ -63,9 +66,10 @@ embed_message_color | string | #00AE86 | `All hex color codes`| Sets the color o
 
 #### Using with Node-Red
 Install  `node-red-contrib-discord` in Node-red.
+Add the discord_token to the discordMessage node
 
-This is a basic flow example.
-
+[This is a basic flow example.](https://github.com/Mister-Espria/DiscLoBot/raw/master/node-red_example/flows.json.txt)
+![Node-red_example](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/readme_images/Node-red_example.PNG)
 
 
 

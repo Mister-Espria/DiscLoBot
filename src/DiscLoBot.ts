@@ -75,9 +75,6 @@ bot.on("voiceStateUpdate", (oldMember, newMember) => {
           "Room Notifications",
           newMember.guild.iconURL
         )
-        /*
-         * Alternatively 0x00ae86, use "#00AE86", [0, 174, 134] or an integer number.
-         */
         .setColor(ConfigFile.config.embed_message_color)
         .setDescription(
           "Welcome to the **" + newUserChannel.name + "** Channel.🤔"
@@ -86,9 +83,6 @@ bot.on("voiceStateUpdate", (oldMember, newMember) => {
         .setImage(newMember.user.displayAvatarURL)
         .attachFile(attachment)
         .setThumbnail('attachment://approved.png')
-        /*
-         * Takes a Date object, defaults to current date.
-         */
         .setTimestamp()
         .setURL("https://discordapp.com/")
         .addField(
@@ -96,29 +90,8 @@ bot.on("voiceStateUpdate", (oldMember, newMember) => {
           "Enjoy your stay **" + newMember.displayName + "**!"
         );
 
-      /*
-       * Inline fields may not display as inline if the thumbnail and/or image is too big.
-       */
-      // .addField("Inline Field", "They can also be inline.", true)
-      /*
-       * Blank field, useful to create some space.
-       */
-      // .addBlankField(true)
-      // .addField("Inline Field 3", "You can have a maximum of 25 fields.", true);
-
       channeljoin.send("", { embed });
     }
-
-
-    // const attachment = new Discord.Attachment('./card_images/sample.png', 'sample.png');
-    // const embed = new Discord.RichEmbed()
-    //         .setTitle('Wicked Sweet Title')
-    //         .attachFile(attachment)
-    //         .setImage('attachment://sample.png')
-    //         channeljoin.send({embed}).catch(console.error)
-
-
-
 
 
     if (ConfigFile.config.message_layout_join === "small") {
