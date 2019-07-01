@@ -1,6 +1,5 @@
 export let config = {
     "token": "ENTER_DISCORD_TOKEN_HERE",
-    "prefix": "?",
     "receive_join_messages": true,             //true for receiving nice formatted join messages in channel_join. false means only messages will be sent to channel_log so entering channel id for channel_join is not necessary
     "channel_join": "ENTER_CHANNEL_ID_FOR_JOIN_ANNOUNCEMENTS_HERE",     //Only needed if receive_join_messages = true
     "channel_log": "ENTER_CHANNEL_ID_FOR_LOGGING_HERE",
