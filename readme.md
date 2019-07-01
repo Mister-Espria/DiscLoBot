@@ -81,6 +81,8 @@ So this means you can do automations based on any message.
 
 2. [Node-Red example to control devices in Home-Assistant through Discord](https://github.com/Mister-Espria/DiscLoBot/raw/master/node-red_example/flows.json.txt)
 
+    ![Node-red_control_ha](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/readme_images/Control_HA.PNG)
+
     For this example it is **not** needed to have the DiscLoBot installed. Only the discord node in Node-Red.
     In this example the prefix is set as `!`. Whenever you want to issue a command you start with this prefix.
 
