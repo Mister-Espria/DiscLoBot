@@ -6,7 +6,6 @@
 //Development
 import * as ConfigFile from "./configdev";
 
-
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
@@ -15,22 +14,6 @@ bot.login(ConfigFile.config.token);
 
 //log in console to show bot is ready!
 console.log("Bot Fired Up!");
-
-//delete multiple messages if user has perrmission to do so by typing ^clear
-bot.on("message", function(message) {
-  if (message.content == "^clear") {
-    if (message.member.hasPermission("MANAGE_MESSAGES")) {
-      message.channel.fetchMessages().then(
-        function(list) {
-          message.channel.bulkDelete(list);
-        },
-        function(err) {
-          message.channel.send("ERROR: ERROR CLEARING CHANNEL.");
-        }
-      );
-    }
-  }
-});
 
 // Bot subscribes to voiceStateupdate, which is fired every time a user Joins/leaves or Mutes/Unmutes
 bot.on("voiceStateUpdate", (oldMember, newMember) => {
@@ -59,7 +42,6 @@ bot.on("voiceStateUpdate", (oldMember, newMember) => {
       }
     }
 
-
     if (channellog) {
       channellog.send(
         newMember.displayName + " Joined! Channel " + newUserChannel.name
@@ -67,56 +49,52 @@ bot.on("voiceStateUpdate", (oldMember, newMember) => {
     }
 
     if (ConfigFile.config.receive_join_messages === true) {
-    if (ConfigFile.config.message_layout_join === "big") {
-      const attachment = new Discord.Attachment('./card_images/approved.png', 'approved.png');
-      const embed = new Discord.RichEmbed()
-        .setTitle(newMember.displayName + " Joined A Voicechannel")
-        .setAuthor(
-          "Room Notifications",
-          newMember.guild.iconURL
-        )
-        .setColor(ConfigFile.config.embed_message_color)
-        .setDescription(
-          "Welcome to the **" + newUserChannel.name + "** Channel.🤔"
-        )
-        .setFooter("Message was sent on")
-        .setImage(newMember.user.displayAvatarURL)
-        .attachFile(attachment)
-        .setThumbnail('attachment://approved.png')
-        .setTimestamp()
-        .setURL("https://discordapp.com/")
-        .addField(
-          newMember.displayName,
-          "Enjoy your stay **" + newMember.displayName + "**!"
+      if (ConfigFile.config.message_layout_join === "big") {
+        const attachment = new Discord.Attachment(
+          "./card_images/approved.png",
+          "approved.png"
         );
+        const embed = new Discord.RichEmbed()
+          .setTitle(newMember.displayName + " Joined A Voicechannel")
+          .setAuthor("Room Notifications", newMember.guild.iconURL)
+          .setColor(ConfigFile.config.embed_message_color)
+          .setDescription(
+            "Welcome to the **" + newUserChannel.name + "** Channel.🤔"
+          )
+          .setFooter("Message was sent on")
+          .setImage(newMember.user.displayAvatarURL)
+          .attachFile(attachment)
+          .setThumbnail("attachment://approved.png")
+          .setTimestamp()
+          .setURL("https://discordapp.com/")
+          .addField(
+            newMember.displayName,
+            "Enjoy your stay **" + newMember.displayName + "**!"
+          );
 
-      channeljoin.send("", { embed });
+        channeljoin.send("", { embed });
+      }
+
+      if (ConfigFile.config.message_layout_join === "small") {
+        const embed = new Discord.RichEmbed()
+          .setTitle(newMember.displayName + " Joined A Voicechannel")
+          .setAuthor("Room Notifications", newMember.guild.iconURL)
+          .setColor(ConfigFile.config.embed_message_color)
+          .setDescription(
+            "Welcome to the **" + newUserChannel.name + "** Channel.🤔"
+          )
+          .setFooter("Message was sent on")
+          .setThumbnail(newMember.user.displayAvatarURL)
+          .setTimestamp()
+          .setURL("https://discordapp.com/")
+          .addField(
+            newMember.displayName,
+            "Enjoy your stay **" + newMember.displayName + "**!"
+          );
+
+        channeljoin.send("", { embed });
+      }
     }
-
-
-    if (ConfigFile.config.message_layout_join === "small") {
-      const embed = new Discord.RichEmbed()
-        .setTitle(newMember.displayName + " Joined A Voicechannel")
-        .setAuthor(
-          "Room Notifications",
-          newMember.guild.iconURL
-        )
-        .setColor(ConfigFile.config.embed_message_color)
-        .setDescription(
-          "Welcome to the **" + newUserChannel.name + "** Channel.🤔"
-        )
-        .setFooter("Message was sent on")
-        .setThumbnail(newMember.user.displayAvatarURL)
-        .setTimestamp()
-        .setURL("https://discordapp.com/")
-        .addField(
-          newMember.displayName,
-          "Enjoy your stay **" + newMember.displayName + "**!"
-        );
-
-      channeljoin.send("", { embed });
-    }
-  }
   } else if (newUserChannel === undefined) {
     // User leaves a voice channel or Mutes/ Unmutes
     //Sends Message in Channel log with which user left which channel
