@@ -97,8 +97,13 @@ So this means you can do automations based on any message.
     `!light hallway off`    
     `!switch pc`       
     `!switch pc on`      
-    `!script pc_reboot`     
+    `!script pc_reboot` 
+
+    > If the service `on` or `off` is not provided `toggle` will be used.
 
     > Before a message is sent to Home-Assistant Node-Red wil perform a check in the `Permissions` node. Only messages from an Owner or Admin of the server will go through. This can be changed to other roles or users or anything else you want to limit acces to your Home-Assistant devices.
+
+    ### TO DO
+- [ ] Add command for retrieving data from Home-Assistant sensors
 
 
