@@ -76,10 +76,10 @@ So this means you can do automations based on any message.
 #### Node-Red Examples
 1. [This is a basic flow example based on the messages the DiscLoBot creates.](https://github.com/Mister-Espria/DiscLoBot/raw/master/node-red_example/flows.json.txt)
 
-    ![Node-red_example](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/readme_images/Node-red_example.PNG)
+    ![Node-red_example](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/node-red_example/example_1_voicestate_messages.json.txt)
 
 
-2. [Node-Red example to control devices in Home-Assistant through Discord](https://github.com/Mister-Espria/DiscLoBot/raw/master/node-red_example/flows.json.txt)
+2. [Node-Red example to control devices in Home-Assistant through Discord](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/node-red_example/example_2_ha_control.json.txt)
 
     ![Node-red_control_ha](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/readme_images/Control_HA.PNG)
 
