@@ -24,7 +24,7 @@ This is a selfhosted bot. I found public bots which had this functionalty but th
 
 ## Example Usecase
 I use this bot in combination with [Home-Assistant](https://www.home-assistant.io/) and [Node-Red](https://nodered.org/). I use Node-Red to read the log messages created by DiscLoBot and based on the text perform an action in Home-Assistant. For example when i mute myself the led-strip behind my desk turns to red an back to it's orignal color if i unmute myself.
-Or when a specific friend joins a voicechannel i will let google home announce it. The bot creates also Join messages in a seperate channel so on mobile you will receive also notifications if somebody joins a voicechannel.
+Or when a specific friend joins a voicechannel i will let google home announce it. The bot creates also Join messages in a seperate channel so on pc and mobile you will receive also notifications if somebody joins a voicechannel.
 
 ## Setup
 
@@ -65,7 +65,7 @@ embed_message_color | string | #00AE86 | `All hex color codes`| Sets the color o
 
 ## Node-Red
 
-#### Using with Node-Red
+#### Reading Discord messages with Node-Red
 Install  `node-red-contrib-discord` in Node-red. To do this click the top right corner in Node-Red > Manage Palette > install > type in searchox: node-red-contrib-discord > install
 
 Drag the discord node into your flow and create another discord_token to avoid conflicts with the DiscLoBot. Use the same [guide](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token) to add the bot to your Discord and obtain the token.
@@ -84,7 +84,7 @@ So this means you can do automations based on any message.
     ![Node-red_control_ha](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/readme_images/Control_HA.PNG)
 
     For this example it is **not** needed to have the DiscLoBot installed. Only the discord node in Node-Red.
-    In this example the prefix is set as `!`. Whenever you want to issue a command you start with this prefix.
+    In this example the prefix is set as `!` Whenever you want to issue a command you start with this prefix.
 
     Let's say you got these entity's you want to control: 
     * light.hallway
@@ -99,6 +99,6 @@ So this means you can do automations based on any message.
     `!switch pc on`      
     `!script pc_reboot`     
 
-    > Before a message is sent to Home-Assistant Node-Red wil perform a check in the `Permissions` node. Only messages from an Owner or Admin of the server will go through. This can be changed to other roles or users or anything else you want.
+    > Before a message is sent to Home-Assistant Node-Red wil perform a check in the `Permissions` node. Only messages from an Owner or Admin of the server will go through. This can be changed to other roles or users or anything else you want to limit acces to your Home-Assistant devices.
 
 
