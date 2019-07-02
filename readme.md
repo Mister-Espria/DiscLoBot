@@ -24,7 +24,7 @@ This is a selfhosted bot. I found public bots which had this functionalty but th
 
 ## Example Usecase
 I use this bot in combination with [Home-Assistant](https://www.home-assistant.io/) and [Node-Red](https://nodered.org/). I use Node-Red to read the log messages created by DiscLoBot and based on the text perform an action in Home-Assistant. For example when i mute myself the led-strip behind my desk turns to red an back to it's orignal color if i unmute myself.
-Or when a specific friend joins a voicechannel i will let google home announce it. The bot creates also Join messages in a seperate channel so on pc and mobile you will receive also notifications if somebody joins a voicechannel.
+Or when a specific friend joins a voicechannel i will let google home announce it. The bot creates also Join messages in a seperate channel so on pc and mobile you will receive also notifications if somebody joins a voicechannel. It all depends on how you set it up as you have the flexibility of Node-Red.
 
 ## Setup
 
