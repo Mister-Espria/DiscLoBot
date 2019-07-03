@@ -83,8 +83,8 @@ So this means you can do automations based on any message.
 
 2. [Node-Red example to control devices in Home-Assistant through Discord.](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/node-red_example/example_2_ha_control.json.txt)
 
-    Use this example to control your Home-Assitant lights, switches and script with Discord.
-
+    Use this example to control your Home-Assitant lights, switches and scripts with Discord.
+script
     ![Node-red_control_ha](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/readme_images/Control_HA.PNG)
 
     >For this example it is **not** needed to have the DiscLoBot installed. Only the discord node in Node-Red.
@@ -112,6 +112,10 @@ So this means you can do automations based on any message.
     ![Node-red_control_ha_with_sensorsinfo](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/readme_images/Node-Red_example_3.PNG)
 
     This example is the same as the previous one, except for the fact that you can ask for sensor and binary_sensor state. A message will return with the state and when it last changed. But there is a caveat; you need to create a webhook within Discord which is easy. The channel where you create the webhook will receive the messages. So you can ask in every channel for the info, but only the channel the webhook is created for will receive the message.
+   
+    You can use `!sensor` and `!binary_sensor`. The message will look like this:
+    
+    ![example_message_sensorinfo](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/readme_images/Example_sensor_message.PNG)
     
 > If you use more than one example, you can just use one discordMessage node instead of multiple.
 
