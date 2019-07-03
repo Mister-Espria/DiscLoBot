@@ -107,17 +107,14 @@ So this means you can do automations based on any message.
 
     > Before a message is sent to Home-Assistant Node-Red wil perform a check in the `Permissions` node. Only messages from an Owner or Admin of the server will go through. This can be changed to other roles or users or anything else you want to limit acces to your Home-Assistant devices.
 
-3. [Same as prevouos example with the addition of retrieving Home-Assistant binary_sensor/sensor info in Discord.](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/node-red_example/example_2_ha_control.json.txt)
+3. [Same as previous example with the addition of retrieving Home-Assistant binary_sensor/sensor info in Discord.](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/node-red_example/example_3_including_sensors.json.txt)
+
+    ![Node-red_control_ha_with_sensorsinfo](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/readme_images/Node-Red_example_3.PNG)
 
     This example is the same as the previous one, except for the fact that you can ask for sensor and binary_sensor state. A message will return with the state and when it last changed. But there is a caveat; you need to create a webhook within Discord which is easy. The channel where you create the webhook will receive the messages. So you can ask in every channel for the info, but only the channel the webhook is created for will receive the message.
     
 > If you use more than one example, you can just use one discordMessage node instead of multiple.
 
-    ### TO DO
-    
-- [x] Add command for retrieving data from Home-Assistant sensors
-- [ ] Finish example 3
-- [ ] Improve sensor handling
 
 
 
