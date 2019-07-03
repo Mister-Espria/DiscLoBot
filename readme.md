@@ -74,20 +74,20 @@ This discord node will read all the messages of all the channels it has read per
 So this means you can do automations based on any message.
 
 #### Node-Red Examples
-1. [This is a basic flow example based on the messages the DiscLoBot creates.](https://github.com/Mister-Espria/DiscLoBot/raw/master/node-red_example/flows.json.txt)
+1. [This is a basic flow example based on the messages the DiscLoBot creates.](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/node-red_example/example_1_voicestate_messages.json.txt)
     
     Use this example to be able to act on you or other people joining, leaving, muting etc.
 
-    ![Node-red_example](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/node-red_example/example_1_voicestate_messages.json.txt)
+    ![Node-red_example](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/readme_images/Node-red_example.PNG)
 
 
-2. [Node-Red example to control devices in Home-Assistant through Discord](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/node-red_example/example_2_ha_control.json.txt)
+2. [Node-Red example to control devices in Home-Assistant through Discord.](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/node-red_example/example_2_ha_control.json.txt)
 
     Use this example to control your Home-Assitant lights, switches and script with Discord.
 
     ![Node-red_control_ha](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/readme_images/Control_HA.PNG)
 
-    For this example it is **not** needed to have the DiscLoBot installed. Only the discord node in Node-Red.
+    >For this example it is **not** needed to have the DiscLoBot installed. Only the discord node in Node-Red.
     In this example the prefix is set as `!` Whenever you want to issue a command you start with this prefix.
 
     Let's say you got these entity's you want to control: 
@@ -107,11 +107,14 @@ So this means you can do automations based on any message.
 
     > Before a message is sent to Home-Assistant Node-Red wil perform a check in the `Permissions` node. Only messages from an Owner or Admin of the server will go through. This can be changed to other roles or users or anything else you want to limit acces to your Home-Assistant devices.
 
-3. Example 3 WIP
+3. [Same as prevouos example with the addition of retrieving Home-Assistant binary_sensor/sensor info in Discord.](https://raw.githubusercontent.com/Mister-Espria/DiscLoBot/master/node-red_example/example_2_ha_control.json.txt)
 
     This example is the same as the previous one, except for the fact that you can ask for sensor and binary_sensor state. A message will return with the state and when it last changed. But there is a caveat; you need to create a webhook within Discord which is easy. The channel where you create the webhook will receive the messages. So you can ask in every channel for the info, but only the channel the webhook is created for will receive the message.
     
+> If you use more than one example, you can just use one discordMessage node instead of multiple.
+
     ### TO DO
+    
 - [x] Add command for retrieving data from Home-Assistant sensors
 - [ ] Finish example 3
 - [ ] Improve sensor handling
