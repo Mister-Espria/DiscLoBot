@@ -37,7 +37,7 @@ Or when a specific friend joins a voicechannel i will let google home announce i
 #### Installation
 
 1. First follow [this simple guide](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token) to create a bot and obtain a token.
-2. [Download](https://github.com/Mister-Espria/DiscLoBot/releases/latest) the latest release and extract them to a folder on your machine.
+2. [Download](https://github.com/Mister-Espria/DiscLoBot/releases/latest) the latest release and extract the files to a folder on your machine.
 3. Edit config.ts. Add your Discord_token obtained in step 1 and add the channel id for join messages and the channel id for all logging messages. 
     > **Finding channel ID:** 
     On Discord, open your User Settings -> Appearance -> Enable Developer Mode. Then you can right click on any text channel and an option to `Copy ID` will show.
