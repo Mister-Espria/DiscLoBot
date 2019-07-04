@@ -48,6 +48,8 @@ You can change other options in config.ts aswell. Check [ConfigOptions](https://
 
     > After changes to the bot or config you can reload the bot using `pm2 reload DiscLoBot`
 
+    > When you have the bot running you can activate auto-start on boot by using `pm 2 startup` followed by `pm2 save`
+
 
 
 ##### ConfigOptions
@@ -68,7 +70,7 @@ embed_message_color | string | #00AE86 | `All hex color codes`| Sets the color o
 #### Reading Discord messages with Node-Red
 Install  `node-red-contrib-discord` in Node-red. To do this click the top right corner in Node-Red > Manage Palette > install > type in searchbox: node-red-contrib-discord > install
 
-Drag the discord node into your flow and create another discord_token to avoid conflicts with the DiscLoBot. Use the same [guide](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token) to add the bot to your Discord and obtain the token.
+Drag the discord node into your flow and create another discord token to avoid conflicts with the DiscLoBot. Use the same [guide](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token) to add the bot to your Discord and obtain the token.
 
 This discord node will read all the messages of all the channels it has read permissions.
 So this means you can do automations based on any message.
@@ -119,6 +121,9 @@ script
     
 > If you use more than one example, you can just use one discordMessage node instead of multiple.
 
+## Future
 
+* Look into making the bot easy to install (maybe hassio addon)
+* More funtinalyti
 
 
