@@ -44,7 +44,7 @@ bot.on("voiceStateUpdate", (oldMember, newMember) => {
 
     if (channellog) {
       channellog.send(
-        newMember.displayName + " Joined! Channel " + newUserChannel.name
+        newMember.displayName + " Joined! Channel: " + newUserChannel.name
       );
     }
 
