@@ -123,7 +123,6 @@ script
 
 ## Future
 
-* Look into making the bot easy to install (maybe hassio addon)
-* More funtinalyti
+* Look into making the bot easy to install (maybe hassio addon) and maybe integrate it with Red Discord bot, but no promises on this.
 
 
